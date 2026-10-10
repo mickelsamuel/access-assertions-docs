@@ -71,9 +71,21 @@ Everything lives in Forge storage inside your Atlassian cloud; there's no databa
 
 Forge runs the scan once a day; you don't pick the time. It walks the full permission graph behind every active rule and commits a new result with its evidence. Archiving a rule takes effect on the next scan: the retirement comment posts to any open ticket and the ticket closes, recording that the finding stopped being measured rather than fixed. The rule stops being scanned the moment you archive it, and every published revision stays readable and exportable.
 
+Results and the evidence behind them are kept for 400 days, so a full audit year is still there at fieldwork. Jira's own audit log keeps 3 months by default and 6 at most.
+
 ## Pricing
 
 Paid app, billed through the Atlassian Marketplace. Current pricing and trial terms are on the listing.
+
+## Guides
+
+Practical guides for Jira Cloud admins, each solving the problem with native Jira first:
+
+- [Who can access a Jira Cloud project? How to list it and export it](guides/who-can-access-a-jira-project.md)
+- [Running a Jira Cloud user access review for SOC 2 or ISO 27001](guides/jira-user-access-review-soc2-iso27001.md)
+- [Jira Cloud audit log retention: the 180-day limit and how to keep access evidence longer](guides/jira-audit-log-retention.md)
+- [How to list every project administrator in Jira Cloud](guides/list-jira-project-administrators.md)
+- [Jira Permission Helper vs an access review](guides/permission-helper-vs-access-review.md)
 
 ## Support
 

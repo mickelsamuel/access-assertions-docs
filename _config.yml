@@ -1,0 +1,8 @@
+title: Access Assertions for Jira Cloud
+description: Guides for Jira Cloud admins on access reviews, project permissions and audit evidence.
+theme: minima
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+exclude:
+  - .git
