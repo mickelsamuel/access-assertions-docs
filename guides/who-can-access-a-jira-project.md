@@ -41,7 +41,7 @@ Two catches in Atlassian's own description of this endpoint:
 
 - It "takes the users in the range defined by `startAt` and `maxResults`, up to the thousandth user", then filters. Pages come back with fewer results than you asked for, so keep paging until the range runs out. On sites with more than about 1,000 users it won't see everyone. Atlassian's suggestion for that case is to pull all users with `GET /rest/api/3/users/search` and filter in your own code.
 - Privacy settings apply, so email addresses can be hidden. Keep the `accountId` as the key in your export.
-- App accounts come back too. On a fresh site I tested in October 2026, one project returned 12 accounts: one person and 11 Atlassian apps (Jira Outlook, Microsoft Teams for Jira Cloud and so on). Each result has an `accountType`, so keep `atlassian` (people) and set `app` aside before you count anyone.
+- App accounts come back too. On a fresh site I tested in October 2026, one project returned 12 accounts: one person and 11 app accounts (Jira Outlook, Microsoft Teams for Jira Cloud and so on). Each result has an `accountType`, so keep `atlassian` (people) and set `app` aside before you count anyone.
 
 If you're a Jira admin and want the answer per user rather than per project, `POST /rest/api/3/permissions/check` takes an `accountId`, a list of project permissions and up to 1,000 project IDs, and returns the projects where that user has the permission.
 
@@ -75,7 +75,7 @@ Native limits, in one place: no project-level export in the UI; the user export 
 
 ## Doing it with Access Assertions
 
-I build Access Assertions, a Jira Cloud app for exactly this check, so treat this paragraph accordingly. You write a rule as a sentence, for example "only these groups may browse these projects", and it checks the rule every night. Each rule gets PASS, FAIL or UNKNOWN. PASS only appears when every group and role behind the rule was read in full; otherwise you get UNKNOWN with the reason. A failure opens one Jira ticket naming the full path from project to account, and the results export as CSV and JSON. It's read-only and runs entirely on Atlassian. It handles company-managed projects only for now, up to 25 projects per rule. [Access Assertions on the Atlassian Marketplace](https://marketplace.atlassian.com/apps/370337795).
+I build Access Assertions, a Jira Cloud app for exactly this check, so treat this paragraph accordingly. You write a rule as a sentence, for example "only these groups may browse these projects", and it checks the rule every night. Each rule gets PASS, FAIL or UNKNOWN. PASS only appears when every group and role behind the rule was read in full; otherwise you get UNKNOWN with the reason. If you turn findings on, a failure opens one Jira ticket naming the full path from project to account, and the results export as CSV and JSON. It's read-only and runs entirely on Atlassian. It handles company-managed projects only for now, up to 25 projects per rule. [Access Assertions on the Atlassian Marketplace](https://marketplace.atlassian.com/apps/370337795).
 
 ## Sources
 

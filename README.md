@@ -86,6 +86,10 @@ Practical guides for Jira Cloud admins, each solving the problem with native Jir
 - [Jira Cloud audit log retention: the 180-day limit and how to keep access evidence longer](guides/jira-audit-log-retention.md)
 - [How to list every project administrator in Jira Cloud](guides/list-jira-project-administrators.md)
 - [Jira Permission Helper vs an access review](guides/permission-helper-vs-access-review.md)
+- [How to get a Jira Cloud permissions report, per project and per person](guides/jira-permissions-report.md)
+- [How to make a Jira Cloud project private (and keep it that way)](guides/make-a-jira-project-private.md)
+- [Jira Cloud issue security levels: who can actually see a secured work item](guides/jira-issue-security-levels.md)
+- [Jira Cloud user access review checklist (with a CSV template)](guides/jira-user-access-review-checklist.md)
 
 ## Support
 

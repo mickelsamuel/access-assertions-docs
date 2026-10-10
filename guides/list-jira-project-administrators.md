@@ -80,7 +80,7 @@ They don't use permission schemes, so steps 2 and 3 don't apply. Admin rights co
 
 ## Doing it with Access Assertions
 
-I build Access Assertions, so weigh this accordingly. One of its four rule types is "who may administer this project", written as a sentence and checked nightly across up to 25 company-managed projects per rule. Each rule comes back PASS, FAIL or UNKNOWN. PASS needs every group and role behind the rule to have been read in full; if anything couldn't be read, you get UNKNOWN and the reason. When someone outside the allowed set can administer a project, it opens one Jira ticket naming the path from project to scheme, grant, role, group and account. It's read-only and runs entirely on Atlassian. [Access Assertions on the Atlassian Marketplace](https://marketplace.atlassian.com/apps/370337795).
+I build Access Assertions, so weigh this accordingly. One of its four rule types is "who may administer this project", written as a sentence and checked nightly across up to 25 company-managed projects per rule. Each rule comes back PASS, FAIL or UNKNOWN. PASS needs every group and role behind the rule to have been read in full; if anything couldn't be read, you get UNKNOWN and the reason. When someone outside the allowed set can administer a project and findings are on, it opens one Jira ticket naming the path from project to scheme, grant, role, group and account. It's read-only and runs entirely on Atlassian. [Access Assertions on the Atlassian Marketplace](https://marketplace.atlassian.com/apps/370337795).
 
 ## Sources
 

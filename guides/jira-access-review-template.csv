@@ -1,0 +1,3 @@
+review_cycle,project,permission,via,account_id,display_name,account_type,user_status,last_seen_in_jira,owner,decision,reason,change_ticket,changed_on,verified_on
+2026-Q4,ABC,BROWSE_PROJECTS,group contractors,<account-id>,<person>,atlassian,Active,2026-06-02,<project owner>,remove,Contract ended in August,ABC-123,2026-10-14,2026-10-15
+2026-Q4,ABC,ADMINISTER_PROJECTS,role Administrators > group abc-admins,<account-id>,<person>,atlassian,Active,2026-10-09,<project owner>,keep,Project lead,,,
