@@ -86,7 +86,7 @@ The six columns after `review_cycle` are the first six columns of the permission
 
 ## Doing it with Access Assertions
 
-I build Access Assertions, so weigh this accordingly. A quarterly review tells you what access looked like on one day. The app checks the rules behind the review every night in between: who may browse a project, who must never browse it, who may administer it, and which groups issue security may grant to. Each rule covers up to 25 company-managed projects on sites of up to 1,000 active users. With findings on, a break opens one Jira ticket naming the path to the account, and results are kept for 400 days and export as CSV or JSON, so the evidence for the whole year is there at audit time. [Access Assertions on the Atlassian Marketplace](https://marketplace.atlassian.com/apps/370337795).
+I build Access Assertions, so weigh this accordingly. A quarterly review tells you what access looked like on one day. The app checks the rules behind the review every night in between: who may browse a project, who must never browse it, who may administer it, and which groups issue security may grant to. Each rule covers up to 25 company-managed projects on sites of up to 4,000 active accounts (1,250 for admin rules). With findings on, a break opens one Jira ticket naming the path to the account, and results are kept for 400 days and export as CSV or JSON, so the evidence for the whole year is there at audit time. [Access Assertions on the Atlassian Marketplace](https://marketplace.atlassian.com/apps/370337795).
 
 ## Sources
 

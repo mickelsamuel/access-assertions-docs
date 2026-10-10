@@ -31,7 +31,7 @@ Install from the Atlassian Marketplace onto your Jira Cloud site. The app then a
 
 Every action inside the app re-checks Jira administrator authorization on the server, so creating, editing or archiving a rule, or changing where findings go, needs a Jira admin.
 
-It works on company-managed projects, up to 25 selected projects per assertion, on sites of up to 1,000 active users. Team-managed and Jira Service Management projects are refused when you try to write a rule against them, not mismeasured later.
+It works on company-managed projects, up to 25 selected projects per assertion, on sites of up to 4,000 active accounts (1,250 for admin rules, which check every account for Jira admin rights). People, app accounts and Jira Service Management portal customers all count. Team-managed and Jira Service Management projects are refused when you try to write a rule against them, not mismeasured later.
 
 ## Permissions
 
