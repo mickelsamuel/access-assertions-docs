@@ -24,3 +24,7 @@ Practical guides on Jira Cloud access, written from the API and checked on a liv
   How Jira Cloud security levels work with Browse spaces, who ends up seeing a work item that has a level, which plans include them, and the mistakes that leave secured work visible.
 - **[Jira Cloud user access review checklist (with a CSV template)](jira-user-access-review-checklist.md)**  
   A quarterly access review checklist for Jira Cloud: what to pull, what to flag, how to record each decision and how to prove removals happened. Includes a plain CSV template.
+- **[Who can see a team-managed Jira project? Open, Limited, Private and what the API says](who-can-see-a-team-managed-jira-project.md)**  
+  Team-managed Jira spaces have no permission scheme screen, but the REST API has one. How the access level shows up in it, how to list everyone who can browse, and where Jira's own answers disagreed.
+- **[Who can see a Jira Service Management project? Agents vs portal customers](who-can-see-a-jira-service-management-project.md)**  
+  A JSM service space has two audiences. Agents get in through roles you can list from the API. Portal customers get in through a grant Jira's own permission answers don't see. What an access review can prove for each.

@@ -105,7 +105,7 @@ Then keep checking. A private project rarely gets opened on purpose. It gets ope
 
 ## Team-managed projects
 
-They don't have permission schemes. Instead each team-managed space has an access setting. Atlassian's wording: when a space is private, "only Jira admins and people you add to the space can see it in their space directory." Open and Limited let anyone on the site view work items. So for a team-managed project, set access to Private and manage the people list.
+They have no permission scheme screen. Each team-managed space has an access setting instead, and Jira rewrites a scheme scoped to that one space (readable through the REST API) whenever the setting changes. Atlassian's wording: when a space is private, "only Jira admins and people you add to the space can see it in their space directory." Open and Limited let anyone on the site view work items. So for a team-managed project, set access to Private and manage the people list.
 
 ## Doing it with Access Assertions
 

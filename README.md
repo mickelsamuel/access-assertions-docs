@@ -92,6 +92,8 @@ Practical guides for Jira Cloud admins, each solving the problem with native Jir
 - [How to make a Jira Cloud project private (and keep it that way)](guides/make-a-jira-project-private.md)
 - [Jira Cloud issue security levels: who can actually see a secured work item](guides/jira-issue-security-levels.md)
 - [Jira Cloud user access review checklist (with a CSV template)](guides/jira-user-access-review-checklist.md)
+- [Who can see a team-managed Jira project? Open, Limited, Private and what the API says](guides/who-can-see-a-team-managed-jira-project.md)
+- [Who can see a Jira Service Management project? Agents vs portal customers](guides/who-can-see-a-jira-service-management-project.md)
 
 ## Support
 

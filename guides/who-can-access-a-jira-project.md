@@ -63,7 +63,7 @@ You end up with rows like: project > scheme > grant > role > group > person. Tha
 ## Things that change the answer
 
 - **Work item security.** Security levels can hide individual work items from people who can browse the project. They're set under **Settings > Work items > Work item security schemes**, and a project-level list overstates what those people actually see.
-- **Team-managed projects** don't use permission schemes. Access comes from the project's access level (Open, Limited or Private) plus roles, so they need their own pass.
+- **Team-managed projects** have no permission scheme screen, but the REST API still returns one (`GET /rest/api/3/project/{projectIdOrKey}/permissionscheme`), scoped to that one project and rewritten by Jira when the access level (Open, Limited or Private) changes. Access comes from that level plus roles, so they need their own pass.
 - **Free plan.** Permission schemes, project roles and work item security aren't available on Free Jira sites.
 - **Jira admins** automatically inherit Administer spaces, per Atlassian's permission reference. Decide whether your list should include them.
 
