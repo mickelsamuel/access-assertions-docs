@@ -29,7 +29,7 @@ If findings are turned on, a FAIL or UNKNOWN opens a ticket in the Jira project 
 
 Install from the Atlassian Marketplace onto your Jira Cloud site. The app then appears under **Jira settings → Apps → Access Assertions**. There's no separate site or login. The app declares no external endpoints, so nothing it does leaves Atlassian's infrastructure.
 
-The app lives on a Jira administration page, which Jira shows only to Jira admins, so creating, editing or archiving a rule, or changing where findings go, happens there.
+The app lives on a Jira administration page. Since 3.13.0, every action inside it also checks on the server that the person making the request is a Jira administrator, using Jira's own permission check for the account Atlassian attaches to the request, so creating, editing or archiving a rule, or changing where findings go, needs a Jira admin. If that check can't be completed, the action is refused. Jira's answer can take a few minutes to catch up after someone loses admin rights.
 
 It works on company-managed projects, up to 25 selected projects per assertion, on sites of up to 4,000 active accounts (1,250 for admin rules, which check every account for Jira admin rights). People, app accounts and Jira Service Management portal customers all count. Team-managed and Jira Service Management projects are refused when you try to write a rule against them, not mismeasured later. A project is checked only when Jira's own answer marks it as company-managed; anything else is reported as unsupported.
 
