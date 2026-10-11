@@ -20,7 +20,7 @@ You write an assertion as a sentence, not a query: pick a rule type, the project
 Every night the app expands the real permission graph behind each rule (permission scheme, grant, project role, group, member, active account) and compares it with what you wrote. Global Jira administrators are checked separately, since they inherit project admin everywhere. Each check ends in one of three states:
 
 - **PASS**: every required source was read and no violation exists.
-- **FAIL**: at least one violation is proven. The count is a floor ("at least N"), never a guess.
+- **FAIL**: at least one violation is proven. The count is exact when the run read everything it needed; otherwise it's a floor ("at least N"), never a guess.
 - **UNKNOWN**: the proof didn't complete, and the result says why.
 
 If findings are turned on, a FAIL or UNKNOWN opens a ticket in the Jira project you chose, carrying the exact grant chain that caused it. An unchanged failure doesn't open a second ticket; it's tracked as one episode until it's resolved, reopened, or the assertion is retired.
@@ -31,7 +31,7 @@ Install from the Atlassian Marketplace onto your Jira Cloud site. The app then a
 
 Every action inside the app re-checks Jira administrator authorization on the server, so creating, editing or archiving a rule, or changing where findings go, needs a Jira admin.
 
-It works on company-managed projects, up to 25 selected projects per assertion, on sites of up to 4,000 active accounts (1,250 for admin rules, which check every account for Jira admin rights). People, app accounts and Jira Service Management portal customers all count. Team-managed and Jira Service Management projects are refused when you try to write a rule against them, not mismeasured later.
+It works on company-managed projects, up to 25 selected projects per assertion, on sites of up to 4,000 active accounts (1,250 for admin rules, which check every account for Jira admin rights). People, app accounts and Jira Service Management portal customers all count. Team-managed and Jira Service Management projects are refused when you try to write a rule against them, not mismeasured later. A project is checked only when Jira's own answer marks it as company-managed; anything else is reported as unsupported.
 
 ## Permissions
 
@@ -52,8 +52,10 @@ Everything lives in Forge storage inside your Atlassian cloud; there's no databa
 1. Open **Jira settings → Apps → Access Assertions**.
 2. In **Settings**, pick the project and issue type for governance tickets, then turn findings on. You can skip this; assertions still run and produce results either way.
 3. In **Assertions**, choose **New assertion**. Pick a rule type, name it, choose up to 25 company-managed projects, then the groups or people the rule is about (the field is labelled for the rule type: "Who may browse", "Who must not browse", "Who may administer", or "Approved groups"). Read the sentence the app builds, since that sentence is the rule, and publish it.
+
+   Not sure who should be on the list? Choose **Start from a project's current access** instead. Pick a company-managed project and the app reads who can browse it today: its permission scheme, the roles that scheme lets browse, and the groups behind Jira product access. It lists them, you tick the ones who are supposed to have that access, and it tells you what the first run should report before you publish. A group that gives people access to a Jira product arrives unticked, and a grant to everyone can't go into a rule at all; the app says where to change it in Jira. Reading changes nothing in Jira.
 4. Press **Run now**, or wait for the nightly scan.
-5. Read the result. FAIL shows the exact grant chain behind each violation; UNKNOWN says why the proof couldn't finish and what would fix it.
+5. Read the result. FAIL shows the grant path behind each violation, with every step labelled: project, permission scheme, permission, role or group, account. UNKNOWN says why the proof couldn't finish and what would fix it.
 
 ## Using the app
 
@@ -61,7 +63,7 @@ Everything lives in Forge storage inside your Atlassian cloud; there's no databa
 
 **Assertions** lists every published rule. Archived rules are hidden by default; a filter brings them back. Opening a rule shows three tabs: **Current result** (the latest outcome, the violation table, and the controls Run now, Export CSV, Export JSON and Archive; exports show a review step with the record count and caveats first), **History** (every retained result), and **Definition** (the rule as a sentence, plus what Jira calls each group and project right now next to what it was called when the rule was published).
 
-**Findings** tracks ticket episodes: ticket not created yet, open, reopened, resolved, retired, or delivery failed (fix the governance project or issue type in Settings, then run again). "No active episodes" says nothing about whether assertions pass.
+**Findings** tracks ticket episodes: ticket not created yet, open, reopened, resolved, retired, or delivery failed (fix the governance project or issue type in Settings, then run again). Each episode shows when its violation was first seen and when a run last saw it. "No active episodes" says nothing about whether assertions pass.
 
 **Evidence** has two modes. *Results* shows what was proven in a date window, with a completeness summary so anything not yet read is reported as not yet known rather than reading as a pass. *Runs* shows what the scanning process actually did, kept separate because a finished run proves nothing about a rule it never reached. Both modes export more than one result at a time.
 
