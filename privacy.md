@@ -31,6 +31,8 @@ The app implements Atlassian's personal-data reporting requirements. When an acc
 
 Only governance tickets, in the project you choose, and only if you turn findings on. The app never changes a permission, scheme, role, group, or membership.
 
+A findings ticket names the people in a violation, with the display name captured when the rule was published and their Atlassian account ID. Once it's written, that text is ordinary issue content in your Jira. The erasure cycle above cleans the app's own stored evidence, but it can't rewrite text already in an issue, and Atlassian keeps "names or email addresses typed into a page or issue" after an account is deleted ([Atlassian: delete your account](https://support.atlassian.com/atlassian-account/docs/delete-your-atlassian-account/)). If that matters for you, keep findings off, or limit who can browse the governance project.
+
 ## Logging
 
 Operational logs contain reason codes, request counts, timings, and hashed identifiers — no display names, no raw account IDs, no assertion contents.
