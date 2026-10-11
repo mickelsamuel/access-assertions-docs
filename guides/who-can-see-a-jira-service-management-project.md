@@ -82,7 +82,7 @@ What to do instead:
 
 ## What about Access Assertions?
 
-I build Access Assertions, a Jira Cloud app that checks access rules every day, so read this with that in mind. It checks company-managed software and business projects, and team-managed software spaces: you write a rule as a sentence, it walks the scheme, roles and groups, and each rule comes back PASS, FAIL or UNKNOWN. It doesn't check service spaces, so for those the steps above are the way to go. [Access Assertions on the Atlassian Marketplace](https://marketplace.atlassian.com/apps/370337795).
+I build Access Assertions, a Jira Cloud app that checks access rules every day, so read this with that in mind. Since version 3.17.0 it checks company-managed service spaces for staff: you write a rule as a sentence, such as "only service-desk-agents may browse HELP", it walks the scheme, roles and groups, and the rule comes back PASS, FAIL or UNKNOWN. Agents in the Service Desk Team role, project admins and anyone else Jira gives Browse are all counted. Portal customers aren't, for the reason in the section above: the API can't list them all. So every result on a service space says the customer-portal grant was not checked, and the customer side stays the manual steps above. Team-managed service spaces aren't supported. [Access Assertions on the Atlassian Marketplace](https://marketplace.atlassian.com/apps/370337795).
 
 ## Sources
 
