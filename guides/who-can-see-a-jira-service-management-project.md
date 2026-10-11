@@ -82,7 +82,7 @@ What to do instead:
 
 ## What about Access Assertions?
 
-I build Access Assertions, a Jira Cloud app that checks access rules every day, so read this with that in mind. It checks company-managed software and business projects today: you write a rule as a sentence, it walks the scheme, roles and groups, and each rule comes back PASS, FAIL or UNKNOWN. It doesn't check service spaces, so for those the steps above are the way to go. [Access Assertions on the Atlassian Marketplace](https://marketplace.atlassian.com/apps/370337795).
+I build Access Assertions, a Jira Cloud app that checks access rules every day, so read this with that in mind. It checks company-managed software and business projects, and team-managed software spaces: you write a rule as a sentence, it walks the scheme, roles and groups, and each rule comes back PASS, FAIL or UNKNOWN. It doesn't check service spaces, so for those the steps above are the way to go. [Access Assertions on the Atlassian Marketplace](https://marketplace.atlassian.com/apps/370337795).
 
 ## Sources
 

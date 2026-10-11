@@ -199,7 +199,7 @@ The last line is the disagreement above. On an Open space you'd also see the "ba
 
 ## What about Access Assertions?
 
-I build Access Assertions, a Jira Cloud app that checks access rules every day, so read this with that in mind. Today it checks company-managed software and business projects: you write a rule as a sentence, it walks the real scheme, roles and groups, and each rule comes back PASS, FAIL or UNKNOWN. It doesn't check team-managed spaces, so for those the script above is the tool we'd reach for. [Access Assertions on the Atlassian Marketplace](https://marketplace.atlassian.com/apps/370337795).
+I build Access Assertions, a Jira Cloud app that checks access rules every day, so read this with that in mind. Since version 3.15.0 it checks team-managed software spaces too, through the same scheme, roles and groups this guide reads. You write a rule as a sentence and each rule comes back PASS, FAIL or UNKNOWN. An Open or Limited space never passes, because no list of groups can make it private. It comes back as a FAIL that names the access level, or as UNKNOWN when everyone the app samples happens to be on your list. Team-managed business spaces aren't covered yet; for those, the script above is still the tool. [Access Assertions on the Atlassian Marketplace](https://marketplace.atlassian.com/apps/370337795).
 
 ## Sources
 

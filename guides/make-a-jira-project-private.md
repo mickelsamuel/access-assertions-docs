@@ -109,7 +109,7 @@ They have no permission scheme screen. Each team-managed space has an access set
 
 ## Doing it with Access Assertions
 
-I build Access Assertions, so read this with that in mind. Step 4 is the one that slips: the project was private in March and nobody looked again. With the app you write the rule once as a sentence, such as "only finance-team may browse FIN", and it checks the real scheme, grants, roles and groups every night across up to 25 company-managed projects per rule. There's a denylist rule type too, for "contractors must never browse FIN". When the rule breaks and findings are on, it opens one Jira ticket naming the path to the account, and results export as CSV or JSON. [Access Assertions on the Atlassian Marketplace](https://marketplace.atlassian.com/apps/370337795).
+I build Access Assertions, so read this with that in mind. Step 4 is the one that slips: the project was private in March and nobody looked again. With the app you write the rule once as a sentence, such as "only finance-team may browse FIN", and it checks the real scheme, grants, roles and groups every night across up to 25 company-managed projects or team-managed software spaces per rule. There's a denylist rule type too, for "contractors must never browse FIN". When the rule breaks and findings are on, it opens one Jira ticket naming the path to the account, and results export as CSV or JSON. [Access Assertions on the Atlassian Marketplace](https://marketplace.atlassian.com/apps/370337795).
 
 ## Sources
 

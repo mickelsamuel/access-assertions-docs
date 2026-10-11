@@ -75,7 +75,7 @@ Native limits, in one place: no project-level export in the UI; the user export 
 
 ## Doing it with Access Assertions
 
-I build Access Assertions, a Jira Cloud app for exactly this check, so treat this paragraph accordingly. You write a rule as a sentence, for example "only these groups may browse these projects", and it checks the rule every night. Each rule gets PASS, FAIL or UNKNOWN. PASS only appears when every group and role behind the rule was read in full; otherwise you get UNKNOWN with the reason. If you turn findings on, a failure opens one Jira ticket naming the full path from project to account, and the results export as CSV and JSON. It's read-only and runs entirely on Atlassian. It handles company-managed projects only for now, up to 25 projects per rule. [Access Assertions on the Atlassian Marketplace](https://marketplace.atlassian.com/apps/370337795).
+I build Access Assertions, a Jira Cloud app for exactly this check, so treat this paragraph accordingly. You write a rule as a sentence, for example "only these groups may browse these projects", and it checks the rule every night. Each rule gets PASS, FAIL or UNKNOWN. PASS only appears when every group and role behind the rule was read in full; otherwise you get UNKNOWN with the reason. If you turn findings on, a failure opens one Jira ticket naming the full path from project to account, and the results export as CSV and JSON. It's read-only and runs entirely on Atlassian. It handles company-managed projects and team-managed software spaces, up to 25 projects per rule. [Access Assertions on the Atlassian Marketplace](https://marketplace.atlassian.com/apps/370337795).
 
 ## Sources
 

@@ -174,7 +174,7 @@ Save the CSV with the run date in the file name and keep the raw JSON responses 
 
 ## Doing it with Access Assertions
 
-I build Access Assertions, so take this paragraph with that in mind. Instead of reading a report, you write the rule the report is meant to check, as a sentence: who may browse a project, who must never browse it, who may administer it, or which groups issue security may grant to. It walks the same chain every night, scheme to grant to role to group to account, across up to 25 company-managed projects per rule. Each rule comes back PASS, FAIL or UNKNOWN. If you turn findings on, a FAIL or UNKNOWN opens one Jira ticket naming the path to the account, and results export as CSV or JSON and are kept for 400 days. Data stays in Forge storage on Atlassian. [Access Assertions on the Atlassian Marketplace](https://marketplace.atlassian.com/apps/370337795).
+I build Access Assertions, so take this paragraph with that in mind. Instead of reading a report, you write the rule the report is meant to check, as a sentence: who may browse a project, who must never browse it, who may administer it, or which groups issue security may grant to. It walks the same chain every night, scheme to grant to role to group to account, across up to 25 company-managed projects or team-managed software spaces per rule. Each rule comes back PASS, FAIL or UNKNOWN. If you turn findings on, a FAIL or UNKNOWN opens one Jira ticket naming the path to the account, and results export as CSV or JSON and are kept for 400 days. Data stays in Forge storage on Atlassian. [Access Assertions on the Atlassian Marketplace](https://marketplace.atlassian.com/apps/370337795).
 
 ## Sources
 

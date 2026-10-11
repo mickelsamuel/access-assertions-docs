@@ -76,7 +76,7 @@ Use the Helper when a person reports a problem, or right after a change, to conf
 
 ## Doing it with Access Assertions
 
-I build Access Assertions, so this is my own product. It sits on the review side of the table. You write rules as sentences (who may browse a project, who must not, who may administer it, which groups issue security may grant to) and it checks them nightly. Each rule gets PASS, FAIL or UNKNOWN, and it only says PASS when every group and role behind the rule was read in full. With findings turned on, a failure opens one Jira ticket that names the path from project to account, which is the "why" the Helper would give you, for everyone at once. Results export as CSV and JSON. It's read-only and runs on Atlassian, for company-managed projects. [Access Assertions on the Atlassian Marketplace](https://marketplace.atlassian.com/apps/370337795).
+I build Access Assertions, so this is my own product. It sits on the review side of the table. You write rules as sentences (who may browse a project, who must not, who may administer it, which groups issue security may grant to) and it checks them nightly. Each rule gets PASS, FAIL or UNKNOWN, and it only says PASS when every group and role behind the rule was read in full. With findings turned on, a failure opens one Jira ticket that names the path from project to account, which is the "why" the Helper would give you, for everyone at once. Results export as CSV and JSON. It's read-only and runs on Atlassian, for company-managed projects and team-managed software spaces. [Access Assertions on the Atlassian Marketplace](https://marketplace.atlassian.com/apps/370337795).
 
 ## Sources
 
